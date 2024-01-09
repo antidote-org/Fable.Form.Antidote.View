@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>2.0.7</Version>
+  </PropertyGroup>
+  <PropertyGroup>
+      <NpmDependencies>
+          <NpmPackage Name="@leeoniya/ufuzzy" Version="&gt;= 1.0.11" />
+      </NpmDependencies>
+  </PropertyGroup>
+  <!-- Add source files to "fable" folder in Nuget package -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>fable;fable-javascript</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="*.fsproj; **\*.fs; **\*.fsi" PackagePath="fable\" />
+    <Content Include="*.fsproj; *.fs; *.js" Exclude="**\*.fs.js" PackagePath="fable\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <DefineConstants>FABLE_COMPILER</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CssModules.fs" />
+    <!-- <Compile Include="Form.fsi" /> -->
+    <Compile Include="TextAutocompleteFieldComponent.fs" />
+    <Compile Include="Shared.fs" />
+    <Compile Include="FieldViews/Radio.fs" />
+    <Compile Include="FieldViews/RadioTable.fs" />
+    <Compile Include="FieldViews/CheckboxListField.fs" />
+    <Compile Include="FieldViews/TwoChoiceField.fs" />
+    <Compile Include="FieldViews/StateSelectorComponent.fs" />
+    <Compile Include="FieldViews/StateSelectorField.fs" />
+    <Compile Include="FieldViews/FlatCheckboxField.fs" />
+    <Compile Include="FieldViews/FlatRadioField.fs" />
+    <Compile Include="FieldViews/TakePhotoOrGetFromLibrary.fs" />
+    <Compile Include="Form.fs" />
+  </ItemGroup>
+  <Import Project=".paket\Paket.Restore.targets" />
+</Project>

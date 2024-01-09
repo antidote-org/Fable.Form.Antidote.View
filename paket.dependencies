@@ -1,0 +1,14 @@
+source https://api.nuget.org/v3/index.json
+
+storage: none
+
+nuget Fable.Core
+nuget Feliz
+nuget Feliz.Bulma
+nuget Fable.Form
+nuget Fable.Form.Antidote
+nuget Glutinum.Fuse
+nuget Antidote.uFuzzy
+nuget Fable.Fetch
+nuget Feliz.Bulma.Switch
+
